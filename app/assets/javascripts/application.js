@@ -11,19 +11,21 @@
 // GO AFTER THE REQUIRES BELOW.
 //
 //= require lib/jquery-1.11.0  
-//= require lib/jquery-transit  
-//= require lib/underscore 
+//= require lib/jquery.transit  
+//= require lib/underscore
 //= require lib/underscore.string
-//= require lib/backbone  
-//= require lib/backbone.marionette
+//= require lib/backbone      
+//= require lib/backbone.marionette 
+//= require lib/backbone.tabletop
+//= require lib/backbone.tabletopsync
 //= require lib/handlebars-v1.3.0
-//= require lib/bootstrap   
-//= require_tree backbone/config     
+//= require lib/bootstrap  
+//= require_tree ./backbone/config     
 //= require backbone/app      
-//= require_tree backbone/controllers
-//= require_tree backbone/views    
-//= require_tree backbone/entities  
-//= require_tree backbone/components  
-//= require_tree backbone/apps
+//= require_tree ./backbone/controllers
+//= require_tree ./backbone/views    
+//= require_tree ./backbone/entities  
+//= require_tree ./backbone/components  
+//= require_tree ./backbone/apps
 
 _.mixin(_.str.exports());

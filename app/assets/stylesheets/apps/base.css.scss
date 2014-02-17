@@ -1,3 +1,14 @@
-html,body								{ height:100%; font-weight: 300; background-color: #FEFCFE; color: #252424; font-size: 14px; font-family: 'Montserrat', sans-serif; }
+html,body								{ height:100%; font-weight: 300; background-color: white; color: black; font-size: 14px; font-family: 'Montserrat', sans-serif; }
 #wrap										{ min-height:100%; height:auto !important; height:100%; margin:0 auto -60px; }  
-#footer									{ font-size: 12px; background-color: #FEFCFE; color: #252424;  }
+#footer									{ font-size: 12px;  }
+ 
+.fbColor								{ color: #2D4485; }
+
+.navbar									{ background-color: #2D4485; color: #FEFCFE; border-radius: 0; }
+.navbar .brand					{ padding: 15px; }
+
+.rank-container					{ margin: 0 auto; width: 700px; }
+.progress-bar						{ position: relative; }
+.progress-bar-fb 				{ background-color: #2D4485; }
+.progress .nameLabel		{ position: absolute; display: block; right: 0px; padding-right: 20px;  } 
+.progress .pull-label-right	{ right: auto; left: 100%; min-width: 200px; color: #2D4485; padding-left: 20px; }                               

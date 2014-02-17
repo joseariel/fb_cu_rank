@@ -1,12 +1,12 @@
 @FbCURank.module "HeaderApp.Show", (Show, App, Backbone, Marionette, $, _) ->
 	
-	Show.Controller =
+	class Show.Controller extends App.Controllers.Base
 		
-		showHeader: ->
+		initialize: ->
 			#links = App.request "header:entities"
 			
-			headerView = @getHeaderView
+			headerView = @getHeaderView()
 			App.headerRegion.show headerView
 		
 		getHeaderView: ->
-			new Show.Headers
+			new Show.Header

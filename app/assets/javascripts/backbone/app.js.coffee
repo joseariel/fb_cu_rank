@@ -2,7 +2,7 @@
 
 	App = new Marionette.Application     
 	
-	App.rootRoute = Routes.root_path()  
+	App.rootRoute = Routes.root  
 	
 	App.on "initialize:before", (options) ->
 		App.environment = options.environment
@@ -15,8 +15,9 @@
 		footerRegion: "#footer-region"
 		
 	App.addInitializer ->            	
-		App.module("HeaderApp").start()
-		# App.module("FooterApp").start()
+		App.module("HeaderApp").start() 
+		# App.module("RanksApp").start( fi_type: @fi_type, state_for_rank: @state_for_rank )
+		App.module("FooterApp").start()
 	
 	App.reqres.setHandler "default:region", ->
 		App.mainRegion
@@ -30,9 +31,6 @@
 	App.on "initialize:after", ->
 		@startHistory()
 		@navigate(@rootRoute, trigger: true) unless @getCurrentRoute()
-	
-	App.keys = 
-		zillow: "X1-ZWz1dat0oaieq3_3if65"
 	
 	App.shortcuts = ->
 		if App.environment is "development"

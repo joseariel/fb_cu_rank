@@ -1,9 +1,9 @@
 @FbCURank.module "HeaderApp", (HeaderApp, App, Backbone, Marionette, $, _) ->
-	@startWithParent = true
+	@startWithParent = false
 	
 	API =
-		listHeader: ->
-			HeaderApp.Show.Controller.showHeader()
+		showHeader: ->
+			new HeaderApp.Show.Controller()
 	
 	HeaderApp.on "start", ->
 		API.showHeader()
