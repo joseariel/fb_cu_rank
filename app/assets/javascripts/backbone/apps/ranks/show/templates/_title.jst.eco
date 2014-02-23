@@ -1,3 +1,18 @@
-Top <%= @rankLength %> CUs on Facebook 
-<br />   
-<br />   
+<h4 class="text-center fbColor">Top <%= @rankLength %> <%= @formatted_fi_type() %> in <%= @formatted_state() %></h4>
+<h6 class="text-center fbColor">(Based on Actively Engaged Users or 'People Talking About This')</h6> 
+<h6 class="text-center fbColor">As of <%= $.format.date(new Date, "MMM dd yyyy") %></h6> 
+<div class="socialbar-container">
+	<!-- AddThis Button BEGIN -->
+	<div class="addthis_toolbox addthis_default_style addthis_32x32_style">
+	<a class="addthis_button_twitter"></a>
+	<a class="addthis_button_linkedin"></a>
+	<a class="addthis_button_pinterest_share"></a>
+	<a class="addthis_button_google_plusone_share"></a>
+	<a class="addthis_button_facebook"></a>
+	<a class="addthis_button_compact"></a><a class="addthis_counter addthis_bubble_style"></a>
+	</div>
+	<script type="text/javascript">var addthis_config = {"data_ga_property": 'UA-48345752-1', "data_ga_social": true, "data_track_addressbar":true};</script>
+	<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5308145a3275840d"></script>
+	<!-- AddThis Button END -->
+</div>
+<br />                                                    

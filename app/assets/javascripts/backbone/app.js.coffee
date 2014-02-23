@@ -1,4 +1,4 @@
-@FbCURank = do (Backbone, Marionette) ->
+@FbCURank = do (Backbone, Marionette, $) ->
 
 	App = new Marionette.Application     
 	
@@ -6,8 +6,13 @@
 	
 	App.on "initialize:before", (options) ->
 		App.environment = options.environment
+		#App.initializeParse();
 		App.shortcuts()                   
 		# @currentUser = App.request "set:current:user", options.currentUser
+	
+	App.initializeParse = -> 
+		Parse.$ = $;
+		Parse.initialize("AZhT0ksZdBwraEcjJ2RlFpefTX9U5GAw3oBGxUsJ", "BSvNRuRsQUflASUk3DKNO0iMV2fFeYODivz6m1VI"); 
 	            
 	App.addRegions
 		headerRegion: "#header-region"

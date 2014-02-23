@@ -1,9 +1,20 @@
-<div id="header" class="navbar">
+<div id="header" class="navbar navbar-fixed-top">
 	<div class="navbar-inner">
-		<div class="container">
-			<div class="brand text-left">                    
-				<span class="glyphicon glyphicon-stats"></span> Facebook CU Rank
-			</div>    
+		<div class="container">       
+			<div class="navbar-header">
+        <div class="brand text-left">                    
+					<span class="glyphicon glyphicon-stats"></span> Top Credit Unions on Facebook
+				</div>
+      </div>   
+
+			<div class="collapse navbar-collapse">
+				<ul class="nav navbar-nav navbar-right">
+	        <li><a href="http://calcubot.com/subscriptions/calcubot?ref=topcusonfb" target="_blank" class="shastic-pointer text-right">
+						<div>Powered by Shastic</div>
+						<div>Facebook Tools for your Credit Union</div>
+					</a></li>
+				</ul>
+			</div>   
 		</div>
 	</div>
 </div>

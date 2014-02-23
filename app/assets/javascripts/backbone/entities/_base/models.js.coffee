@@ -1,6 +1,8 @@
 @FbCURank.module "Entities", (Entities, App, Backbone, Marionette, $, _) ->       
+  
+	class Entities.Model extends Backbone.Model
 
-	class Entities.Model extends Backbone.Model     
+	class Entities.MarionetteModel extends Backbone.Model     
 		
 		toJSON: (options) ->
 			data = {}
@@ -46,7 +48,7 @@
 			## set errors directly on the model unless status returned was 500 or 404
 			@set _errors: $.parseJSON(xhr.responseText)?.errors unless xhr.status is 500 or xhr.status is 404 
 			
-	class Entities.APIModel extends Entities.Model  
+	class Entities.APIModel extends Entities.MarionetteModel  
 		
 		fetchResponse: (model, xhr, options) =>
 			log "fetchResponse", @resultsRoot

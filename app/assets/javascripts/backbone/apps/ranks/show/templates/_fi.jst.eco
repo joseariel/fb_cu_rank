@@ -1,3 +1,4 @@
 <a href="#" class="progress-bar progress-bar-fb" role="progressbar" aria-valuenow="<%= @rank %>" aria-valuemin="0" aria-valuemax="100" style="width: <%= @rank %>%">
-  <span class="nameLabel<%= if (@rank <= 45.00) then ' pull-label-right text-left' else ' text-right' %>"><%= @name %> - R: <%= @rank %></span> 
+  <div class="nameLabel<%= if ((!@rank) or (@rank <= @benchmark)) then ' pull-label-right text-left' else ' text-right' %>"><%= @name %></div>
+	<div class="rankLabel<%= if ((!@rank) or (@rank <= @benchmark)) then ' pull-label-right text-left' else ' text-right' %>"><%- @position or "<span class='glyphicon glyphicon-warning-sign'></span>" %></div> 
 </a>            

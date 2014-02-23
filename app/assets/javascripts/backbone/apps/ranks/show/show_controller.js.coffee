@@ -3,18 +3,17 @@
 	class Show.Controller extends App.Controllers.Base
 		
 		initialize: (options) -> 
-			{ region, fi_type, state_for_rank } = options
-			@fis 	= App.request "fis:entities", fi_type, state_for_rank
+			{ region, fi_type, state_for_rank } = options           
+			@rank = App.request "rank:entity", fi_type, state_for_rank
 			
 			@layout = @getLayoutView()
 			@listenTo @layout, "show", =>
 				@displayRank()
-			@show @layout
+			@show @layout             
 				                           
-			App.execute "when:synced", @, @fis, (fis, resp, options) =>
-				newCollection = @fis.forState()
-				@displayRank(newCollection)
-				@displayTitle(newCollection)
+			App.execute "when:synced", @, @rank.collection, (fis, resp, options) =>
+				@displayRank(@rank.collection)
+				@displayTitle(@rank.collection)
 			
 		displayRank: (collection) ->
 			rankView = @getRankView(collection)

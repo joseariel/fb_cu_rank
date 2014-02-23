@@ -11,13 +11,15 @@
 // GO AFTER THE REQUIRES BELOW.
 //
 //= require lib/jquery-1.11.0  
-//= require lib/jquery.transit  
+//= require lib/jquery.transit 
+//= require lib/jquery.dateFormat 
 //= require lib/underscore
 //= require lib/underscore.string
 //= require lib/backbone      
 //= require lib/backbone.marionette 
 //= require lib/backbone.tabletop
-//= require lib/backbone.tabletopsync
+//= require lib/backbone.tabletopsync 
+//= require lib/backbone.parse
 //= require lib/handlebars-v1.3.0
 //= require lib/bootstrap  
 //= require_tree ./backbone/config     

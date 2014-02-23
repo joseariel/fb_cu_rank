@@ -9,15 +9,20 @@
 			rankRegion:	"#rank-region" 
 	
 	class Show.Title extends App.Views.ItemView
-		template: "ranks/show/_title"  
-		tagName: 'h4' 
-		className: 'text-center fbColor' 
+		template: "ranks/show/_title"    
 		
 		serializeData: ->
 			data = super()                                                       
 			if @collection 
 				data.rankLength = (if @collection.length > 30 then 30 else @collection.length)
-			data
+				data.fi_type = @collection.fi_type
+			data 
+		
+		templateHelpers: ->
+			
+			formatted_fi_type: -> FbCURank.Entities.FiTypes[@fi_type].plural
+				
+			formatted_state: -> FbCURank.Entities.States.us[@items[0].state]
 		
 	class Show.Empty extends App.Views.ItemView
 		template: "ranks/show/_empty"
@@ -25,13 +30,13 @@
 		
 	class Show.Fi extends App.Views.ItemView
 		template: "ranks/show/_fi"
-		className: "fi progress"
+		className: "fi progress progress-lg"
 		
 		triggers:                                           
 			"click" 										: "rank:fi:clicked"
-	  
-		onRender: ->
-			@$el.find('.nameLabel').width((@model.get('name').length * 10) + 100 + 'px')
+	           
+		onShow: ->
+			@$('.nameLabel').width((@model.get('name').length * 10) + 100 + 'px')
 	
 	class Show.Rank extends App.Views.CompositeView
 		template: "ranks/show/rank"
@@ -42,7 +47,7 @@
 		
 		showCollection: ->           
 			iterator = (item, index) ->
-      	ItemView = @getItemView item
-      	@addItemView item, ItemView, index
-	    _.each(@collection.first(@limit), iterator, @)
+				ItemView = @getItemView item
+				@addItemView item, ItemView, index 
+			_.each(@collection.first(@limit), iterator, @)
 		

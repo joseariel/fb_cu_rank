@@ -4,6 +4,7 @@ do (Backbone) ->
 	                  
 		startHistory: ->
 			if Backbone.history
+				Backbone.history.on "route", @_trackPageView
 				Backbone.history.start()
 	       
 		navigate: (route, options = {}) ->
@@ -32,3 +33,18 @@ do (Backbone) ->
 		
 		getRegistrySize: ->
 			_.size @_registry
+			
+		ga:
+			page: (url) -> ga('send', 'pageview', "/#{url}") 
+			event: (args...) ->
+				params = _.flatten([ 'send', 'event', args ])
+				ga(params...)
+				
+			link:
+				clicked: (href) -> 
+					FbCURank.ga.event "link", "clicked", href   
+
+		_trackPageView: ->
+			url = Backbone.history.getFragment() 
+			FbCURank.ga.page url
+			

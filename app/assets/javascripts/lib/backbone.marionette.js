@@ -1493,7 +1493,7 @@ Marionette.ItemView = Marionette.View.extend({
 
     this.$el.html(html);
     this.bindUIElements();
-
+		
     this.triggerMethod("render", this);
     this.triggerMethod("item:rendered", this);
 
