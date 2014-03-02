@@ -1,6 +1,6 @@
 @FbCURank.module "Entities", (Entities, App, Backbone, Marionette, $, _) -> 
   
-	class Entities.Rank extends App.Entities.Model
+	class Entities.Rank extends App.Entities.ParseModel
 		
 		initialize: ->                                
 			@set('benchmark', 45.00)

@@ -4,7 +4,13 @@ html,body								{ height:100%; font-weight: 300; background-color: white; color
 #footer .container			{ padding-top: 15px; }
 #main-region						{ padding-top: 70px; }  
 
-.fbColor								{ color: #2D4485; }
+.fbColor								{ color: #2D4485; } 
+.btn-fb, .fb-coating    { background-color: #2D4485; color: white; } 
+.btn-fb:hover, .btn-fb:active { color: white; background-color: #1C2860; }    
+
+.jumbotron							{ background-color: white; }          
+
+.modal-content.fb-coating { border-color: #202E6E; }
 
 .navbar									{ background-color: #2D4485; color: #FEFCFE; border-radius: 0; }
 .navbar .brand					{ padding: 18px 15px; } 
@@ -24,7 +30,9 @@ html,body								{ height:100%; font-weight: 300; background-color: white; color
 .progress .pull-label-right	{ right: auto; left: 100%; color: #2D4485; padding-left: 20px; }       
 .nameLabel.pull-label-right { min-width: 200px; left: 100%; padding-left: 66px; }               
 .rankLabel.pull-label-right { padding-right: 0; }  
- 
+            
+.btn-bookmark						{ margin-bottom: 20px; }
+
 // Phones
 @media (max-width: 768px) {
 	
@@ -32,4 +40,9 @@ html,body								{ height:100%; font-weight: 300; background-color: white; color
 	.progress .nameLabel { font-size: 10px; }
 	.progress .rankLabel { font-size: 20px; }
 	
-}     
+}                                           
+
+form.form-sm 						{ width: 300px; }
+                                            
+.margin-center					{ margin: 0 auto; }
+

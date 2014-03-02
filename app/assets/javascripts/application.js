@@ -15,11 +15,11 @@
 //= require lib/jquery.dateFormat 
 //= require lib/underscore
 //= require lib/underscore.string
-//= require lib/backbone      
+//= require lib/backbone         
+//= require lib/backbone.syphon
 //= require lib/backbone.marionette 
 //= require lib/backbone.tabletop
-//= require lib/backbone.tabletopsync 
-//= require lib/backbone.parse
+//= require lib/backbone.tabletopsync
 //= require lib/handlebars-v1.3.0
 //= require lib/bootstrap  
 //= require_tree ./backbone/config     
@@ -27,7 +27,8 @@
 //= require_tree ./backbone/controllers
 //= require_tree ./backbone/views    
 //= require_tree ./backbone/entities  
-//= require_tree ./backbone/components  
+//= require_tree ./backbone/components 
+//= require lib/backbone.parse.sync 
 //= require_tree ./backbone/apps
 
 _.mixin(_.str.exports());

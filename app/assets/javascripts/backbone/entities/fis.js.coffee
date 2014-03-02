@@ -1,6 +1,6 @@
 @FbCURank.module "Entities", (Entities, App, Backbone, Marionette, $, _) -> 
   
-	class Entities.Fi extends App.Entities.Model
+	class Entities.Fi extends App.Entities.ParseModel
 		_parse_class_name: 'Fi'
 		
 		initialize: ->          
@@ -10,7 +10,7 @@
 			@set('assets', _(@get('assets')).toNumber()) if @get('assets')
 			@set('members', _(@get('members')).toNumber()) if @get('members')    
 			
-	class Entities.FisCollection extends App.Entities.Collection  
+	class Entities.FisCollection extends App.Entities.ParseCollection  
 		_parse_class_name: 'Fi' 
 		model: Entities.Fi
 		

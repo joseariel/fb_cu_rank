@@ -1,6 +1,11 @@
 <h4 class="text-center fbColor">Top <%= @rankLength %> <%= @formatted_fi_type() %> in <%= @formatted_state() %></h4>
 <h6 class="text-center fbColor">(Based on Actively Engaged Users or 'People Talking About This')</h6> 
 <h6 class="text-center fbColor">As of <%= $.format.date(new Date, "MMM dd yyyy") %></h6> 
+     
+<div class="text-center">
+	<button class="btn-bookmark btn btn-fb"><span class="glyphicon glyphicon-heart"></span> Bookmark</button>
+</div>
+
 <div class="socialbar-container">
 	<!-- AddThis Button BEGIN -->
 	<div class="addthis_toolbox addthis_default_style addthis_32x32_style">

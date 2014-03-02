@@ -11,6 +11,9 @@
 	class Show.Title extends App.Views.ItemView
 		template: "ranks/show/_title"    
 		
+		triggers:
+			"click .btn-bookmark": "bookmark:button:clicked"
+		
 		serializeData: ->
 			data = super()                                                       
 			if @collection 

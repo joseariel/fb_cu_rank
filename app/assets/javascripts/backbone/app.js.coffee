@@ -17,7 +17,8 @@
 	App.addRegions
 		headerRegion: "#header-region"
 		mainRegion: "#main-region"
-		footerRegion: "#footer-region"
+		footerRegion: "#footer-region"   
+		modalRegion: Marionette.Region.Modal.extend el: "#modal-region"
 		
 	App.addInitializer ->            	
 		App.module("HeaderApp").start() 

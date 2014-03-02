@@ -1,5 +1,7 @@
 @FbCURank.module "Entities", (Entities, App, Backbone, Marionette, $, _) ->       
-                                                                 
+              
+	class Entities.ParseCollection extends Backbone.Collection
+	
 	class Entities.MarionetteCollection extends Backbone.Collection
 		perPage: 50
 		
