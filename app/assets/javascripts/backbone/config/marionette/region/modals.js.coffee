@@ -5,3 +5,6 @@ do (Backbone, Marionette) ->
 		onShow: (view) ->
 			@$el.on 'hidden.bs.modal', (e) => @close()
 			@$el.modal()
+			
+		hide: ->
+			@$el.modal('hide') 

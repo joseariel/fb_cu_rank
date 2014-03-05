@@ -21,10 +21,10 @@
 		addError: (name, error) ->
 			el = @$("[name='#{name}']")
 			sm = $("<small>").text(error)
-			el.after(sm).closest(".row").addClass("error")
+			el.after(sm).closest(".form-group").addClass("has-error")
 		
 		removeErrors: ->
-			@$(".error").removeClass("error").find("small").remove()			
+			@$(".has-error").removeClass("error").find("small").remove()			
 		
 		onClose: ->
 			log "view closing"

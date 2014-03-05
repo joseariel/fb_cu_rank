@@ -6,7 +6,7 @@
 	
 	App.on "initialize:before", (options) ->
 		App.environment = options.environment
-		#App.initializeParse();
+		App.initializeParse();
 		App.shortcuts()                   
 		# @currentUser = App.request "set:current:user", options.currentUser
 	

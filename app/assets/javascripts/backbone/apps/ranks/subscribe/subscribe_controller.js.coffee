@@ -4,8 +4,9 @@
 		
 		initialize: (event) ->
 			@subscriber = App.request "subscriber:entity" 
-			subscribeView = @getSubscribeView()   
-			
+			subscribeView = @getSubscribeView()
+			                                                              
+			@listenTo @subscriber, "subscribed", @hideSubscribeView
 			@listenTo subscribeView, "subscribe:form:submit", @formSubmit
 			
 			App.modalRegion.show subscribeView
@@ -16,9 +17,11 @@
 			@processFormSubmit data, model
 
 		processFormSubmit: (data, model) ->
-			log data, model
 			model.save data
 						
 		getSubscribeView: ->
 			new Subscribe.Form 
-				model: @subscriber
+				model: @subscriber 
+				
+		hideSubscribeView: ->
+			App.modalRegion.hide()

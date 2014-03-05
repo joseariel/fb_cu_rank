@@ -9,7 +9,7 @@
 			@listenTo @layout, "show", =>
 				@displayHeroUnit()
 			@show @layout
-		       
+		      
 		displayHeroUnit: ->
 			heroView = @getHeroUnitView()
 			
